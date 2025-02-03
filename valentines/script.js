@@ -1,10 +1,8 @@
 function selectOption(option) {
     if (option === 'yes') {
-        flashRainbowColors(function() {
-            document.getElementById('question').style.display = 'none';
-            displayHeart();
-        });
-    } else if (option === 'no') {
+        window.location.href = "yes_page.html";
+    }
+    else if (option === 'no') {
         document.getElementById('no-button').innerText = 'You sure?'; 
         var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
@@ -44,11 +42,11 @@ function displayPom() {
 function displayHeart() {
     document.getElementById('image-container').innerHTML = '';
     var imageContainer = document.getElementById('image-container');
-    var catHeartImage = new Image();
-    catHeartImage.src = 'pompompurin-love.gif';
-    catHeartImage.alt = 'Pompompurin Love';
-    catHeartImage.onload = function() {
-        imageContainer.appendChild(catHeartImage);
+    var HeartImage = new Image();
+    HeartImage.src = 'pompompurin-love.gif';
+    HeartImage.alt = 'Pompompurin Love';
+    HeartImage.onload = function() {
+        imageContainer.appendChild(HeartImage);
         document.getElementById('options').style.display = 'none';
     };
 }
