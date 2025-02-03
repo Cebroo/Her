@@ -39,16 +39,4 @@ function displayPom() {
     };
 }
 
-function displayHeart() {
-    document.getElementById('image-container').innerHTML = '';
-    var imageContainer = document.getElementById('image-container');
-    var HeartImage = new Image();
-    HeartImage.src = 'pompompurin-love.gif';
-    HeartImage.alt = 'Pompompurin Love';
-    HeartImage.onload = function() {
-        imageContainer.appendChild(HeartImage);
-        document.getElementById('options').style.display = 'none';
-    };
-}
-
 displayPom();
